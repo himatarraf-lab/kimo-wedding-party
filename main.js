@@ -144,7 +144,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-top.addEventListener('click', function () {
+toTop.addEventListener('click', function () {
 
 
     this.scrollTo({
