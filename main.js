@@ -1,3 +1,18 @@
+let swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+        delay: 2200,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+    },
+
+});
+
+
+// handel conter down 
 const targetDate = new Date("2026-05-24 20:00:00").getTime();
 
 const timer = setInterval(() => {
@@ -39,7 +54,7 @@ let ul = document.querySelector('ul');
 let toggle = document.querySelector('.toggle')
 
 toggle.addEventListener('click', (e) => {
-    e.target.classList.toggle('open')// the current toggle not this hier 
+    e.target.classList.toggle('open')// the current toggle not ((this)) hier 
     ul.classList.toggle('open')
 })
 
@@ -51,104 +66,4 @@ let cancel = document.getElementById('cancel')
 
 cancel.addEventListener('click', () => {
     countdown.classList.add('hide')
-})
-
-// // creating
-let name = document.getElementById('name')
-let message = document.getElementById('message')
-let form = document.querySelector('form')
-let tbody = document.querySelector('tbody')
-
-
-// small validation
-
-// if ((name.value).length < 4) {
-//     window.prompt(`${name.value}  يجب الا يقل سمك عن 4 حرووف`)
-// }
-
-
-
-let data
-
-if (localStorage.getItem('users') == null) {
-    data = [];
-} else {
-    data = JSON.parse(localStorage.getItem('users'))
-}
-
-form.onsubmit = function (e) {
-    e.preventDefault()
-    messegeDetils = {
-        userName: name.value,
-        userMesege: message.value
-    }
-
-    data.push(messegeDetils)
-    displaing()
-
-    localStorage.setItem('users', JSON.stringify(data))
-}
-
-
-// Readeing(displaing)...
-
-displaing()
-function displaing() {
-
-    let item = '';
-
-    for (let i = 0; i < data.length; i++) {
-        item += `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td>${data[i].userName}</td>
-                    <td> ${data[i].userMesege} </td>
-                    </tr>
-                    `
-                    // <td>
-                    //     <button onclick = deleteItem(${i}) class="btn_del">احذف</button>
-                    // </td>
-    }
-
-    tbody.innerHTML = item
-
-    clearInputs()
-
-}
-
-
-function deleteItem(i) {
-    data.splice(i, 1)
-    localStorage.setItem('users', JSON.stringify(data))
-
-    displaing()
-}
-
-
-function clearInputs() {
-    name.value = ''
-    message.value = ''
-}
-
-
-
-let toTop = document.getElementById('toTop');
-
-
-window.addEventListener('scroll', () => {
-    if (scrollY > 30) {
-        toTop.classList.add('show')
-    } else {
-        toTop.classList.remove('show')
-    }
-})
-
-
-toTop.addEventListener('click', function () {
-
-
-    this.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
 })

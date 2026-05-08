@@ -22,6 +22,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 
+    <!-- swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper.js -->
+
     <link rel="icon" href="imgs/heart2.png">
     <!-- gooogel fonts -->
     <title>حفل زفاف كريم طراف - 24 مايو 2026 | قاعة VIP بسمالوط</title>
@@ -79,7 +83,29 @@
             <div>
                 <h2>فرح البشمهندس <span class="kareem">كريم</span> طراف ابو قاسم</h2>
                 <p>حفل زفاف</p>
-                <img src="imgs/tarraf.linkedin.jpeg" alt="">
+
+                <div class="swiper mySwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="imgs/km_1.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imgs/km_3.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imgs/km_5.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+
+                </div>
+
             </div>
 
             <div>
@@ -145,60 +171,26 @@
         <hr style="width: 100%;">
 
         <h1 id="VIP">قاعة VIP</h1>
-        <div  class="wedding_hall">
+        <div class="wedding_hall">
             <img src="imgs/VIP .png" alt="">
-        </div>
 
+        </div>
+        
+        <h3 class="conc" >وجودكم معانا هيفرحنا جدًا وهيخلي اليوم أحلى وأجمل، ومستنيين نشوفكم ونفرح سوا.</h3>
     </section>
 
-    
-    <article>
-        <form title="علما سوف يتم إظهار الرسالة والأسم في نفس  هذة الصفحة">
-            <h2>أترك لهما رسالة</h2>
-            <div>
-                <div>
-                    <label for="name">الأسم</label>
-                    <input type="text" id="name" placeholder="أكتب اسمك هنا" required>
-                </div>
-                <div>
-                    <label for="message">الرسالة</label>
-                    <textarea placeholder="ألف مليون مبروك..." id="message" required></textarea>
-                </div>
-                <div>
-                    <input type="submit" value=" ارسل">
-                </div>
-            </div>
-        </form>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>الأسم</th>
-                    <th>الرسالة</th>
-                    <!-- <th>حذف</th> -->
-                </tr>
-            </thead>
-
-            <tbody >
-
-
-
-            </tbody>
-        </table>
-    </article>
-
-
-    <button id="toTop">🔝</button>
-
     <footer>
-        <p>Made With love by <a href="https://github.com/himatarraf-lab" target="_blank" >Ibrahim Tarraf</a></p>
+        <p>Made With love by <a href="https://github.com/himatarraf-lab" target="_blank">Ibrahim Tarraf</a></p>
 
     </footer>
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+
+
+
 </body>
 
 </html>
