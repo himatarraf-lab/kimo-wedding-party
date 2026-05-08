@@ -307,10 +307,10 @@ main .main_content>div:nth-of-type(2) p {
         transform: translateY(-18px);
     }
 
-    /* main .main_content {
-        margin-top: 8%;
+    main .main_content {
+        margin-top: 10%;
 
-    } */
+    }
 
 
     main nav .toggle {
