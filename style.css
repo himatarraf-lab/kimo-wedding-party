@@ -269,7 +269,6 @@ main .main_content>div:nth-of-type(2)>div {
 
 main .main_content>div:nth-of-type(2) h2 {
     font-weight: 900;
-    letter-spacing: 10px;
     line-height: 1.5;
 }
 
@@ -308,7 +307,7 @@ main .main_content>div:nth-of-type(2) p {
     }
 
     main .main_content {
-        margin-top: 30%;
+        margin-top: 20%;
 
     }
 
